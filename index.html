@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETransfers | Transfers Aeroporto Lisboa & Tours Privados Portugal</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description"
+        content="Transporte privado de confiança, tours em Sintra, Fátima e passeios de barco. Motoristas profissionais e viaturas confortáveis. Reserve já o seu transfer online!">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- SEO Meta Tags -->
+    <meta name="keywords"
+        content="Transfer, Portugal, Turismo, Transporte Executivo, Tours, Lisboa, Algarve, Porto, Fátima">
+    <meta name="author" content="ETransfers">
+    <meta property="og:title" content="ETransfers - Sua viagem começa com um sorriso">
+    <meta property="og:description"
+        content="Transporte turístico e executivo de excelência em Portugal. Viagens confortáveis, seguras e pontuais.">
+    <meta property="og:image" content="https://etransfers.pt/logo.png">
+    <meta property="og:url" content="https://etransfers.pt/">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ETransfers",
+          "url": "https://etransfers.pt/",
+          "logo": "https://etransfers.pt/logo.png",
+          "description": "Transporte turístico e executivo de excelência em Portugal.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+351910000000",
+            "contactType": "customer service",
+            "areaServed": "PT",
+            "availableLanguage": ["Portuguese", "English", "Spanish", "French"]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "ETransfers",
+          "url": "https://etransfers.pt/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://etransfers.pt/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Transfers Privados",
+          "provider": {
+            "@type": "Organization",
+            "name": "ETransfers"
+          },
+          "serviceType": "Transporte de Passageiros",
+          "areaServed": "Portugal"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./Etransfer.pt.svg" alt="ETransfers" style="height: 50px; width: auto;">
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link" data-i18n="nav_home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link" data-i18n="nav_services">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#routes" class="nav-link" data-i18n="nav_routes">Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#complementary" class="nav-link" data-i18n="nav_skipper">Skipper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link nav-btn" data-i18n="nav_book">Reservar</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="lang-select">
+                    <span class="current-lang"><i class="fa-solid fa-globe"></i> PT</span>
+                    <div class="lang-menu">
+                        <a href="#" class="lang-option active" data-lang="pt">Português</a>
+                        <a href="#" class="lang-option" data-lang="en">English</a>
+                        <a href="#" class="lang-option" data-lang="es">Español</a>
+                        <a href="#" class="lang-option" data-lang="fr">Français</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button moved outside to prevent event bubbling -->
+                <button class="hamburger" id="mobile-menu" aria-label="Menu" aria-expanded="false"
+                    aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="hero-title" data-i18n="hero_title">A sua viagem começa com um <span
+                    class="highlight">sorriso.</span></h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Conforto, segurança e pontualidade. O transfer que
+                merece.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_primary">Agendar Agora</a>
+                <a href="#routes" class="btn btn-secondary" data-i18n="hero_cta_secondary">Ver Destinos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="services_title">Os nossos serviços</h2>
+                <p class="section-subtitle" data-i18n="services_subtitle">Flexibilidade e profissionalismo em cada
+                    quilómetro.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                    </div>
+                    <h3 data-i18n="srv_transfers">Transfers</h3>
+                    <p data-i18n="srv_transfers_desc">De e para aeroportos, hotéis e estações com pontualidade.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 data-i18n="srv_tours">Tours</h3>
+                    <p data-i18n="srv_tours_desc">Roteiros turísticos personalizados para conhecer o melhor de
+                        Portugal.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 data-i18n="srv_events">Eventos</h3>
+                    <p data-i18n="srv_events_desc">Transporte para casamentos, congressos e eventos corporativos.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-plane-up"></i>
+                    </div>
+                    <h3 data-i18n="srv_airport">Aeroporto</h3>
+                    <p data-i18n="srv_airport_desc">Monitorização de voos e recepção personalizada no desembarque.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 data-i18n="srv_famous">Arte e Desporto</h3>
+                    <p data-i18n="srv_famous_desc">Discrição e segurança total para personalidades e atletas.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 data-i18n="srv_executive">Transporte Executivo</h3>
+                    <p data-i18n="srv_executive_desc">Viagens corporativas com conforto e eficiência.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <h3 data-i18n="srv_cruise">Cruzeiros</h3>
+                    <p data-i18n="srv_cruise_desc">Transfers diretos para o terminal de cruzeiros de Lisboa.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 data-i18n="srv_private">Transporte Particular</h3>
+                    <p data-i18n="srv_private_desc">Viagens privadas sob medida para suas necessidades diárias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section id="routes" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="routes_title">Tours mais solicitados</h2>
+                <p class="section-subtitle" data-i18n="routes_subtitle">Explore os destinos mais populares de Portugal
+                    connosco.</p>
+            </div>
+
+            <div class="routes-grid">
+                <!-- Card 1 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./SERRA DA ESTRELA.webp" alt="Serra da Estrela">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_1_title">Serra da Estrela</h3>
+                        <p class="route-desc" data-i18n="route_1_desc">A Serra da Estrela, situada na região do Centro,
+                            designa a cadeia montanhosa onde se encontram as maiores altitudes de Portugal Continental.
+                        </p>
+
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./SINTRA.webp" alt="Sintra">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_2_title">Sintra</h3>
+                        <p class="route-desc" data-i18n="route_2_desc">Viva um dia inesquecível! Explore ruas medievais,
+                            cenários marcantes e um passeio confortável até Sintra, repleta de maravilhas arquitetónicas
+                            e natureza vibrante.</p>
+
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cabo da Roca -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./CABO DA ROCA.webp" alt="Cabo da Roca">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_3_title">Cabo da Roca</h3>
+                        <p class="route-desc" data-i18n="route_3_desc">Onde a terra termina e o mar começa, uma das
+                            vistas mais maravilhosas, o ponto mais ocidental da Europa continental. É um lugar de beleza
+                            natural, com imponentes falésias de 150 metros de altura. Paisagem deslumbrante e um
+                            verdadeiro paraíso para os amantes da fotografia.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Cascais -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./CASCAIS.webp" alt="Cascais">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_4_title">Cascais</h3>
+                        <p class="route-desc" data-i18n="route_4_desc">A vila de Cascais tornou-se no século XIX, um
+                            destino de verão predileto da aristocracia e das famílias nobres europeias, devido à sua
+                            localização idílica e clima agradável. Ainda hoje é um destino favorito dos portugueses e da
+                            elite internacional.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Évora -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./EVORA.webp" alt="Évora">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_5_title">Évora</h3>
+                        <p class="route-desc" data-i18n="route_5_desc">Évora é a capital da região centro-sul de
+                            Portugal, o Alentejo. No centro histórico da cidade encontra-se o antigo Templo romano de
+                            Évora (também conhecido por Templo de Diana)</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Fátima -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./FATIMA.webp" alt="Fátima">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_6_title">Fátima</h3>
+                        <p class="route-desc" data-i18n="route_6_desc">Um dos maiores centros de peregrinação Mariana do
+                            mundo, o Santuário de Fátima recebe milhões de visitantes todos os anos, sendo hoje um local
+                            de fé, reflexão e profunda devoção.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 7: Nazaré -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./NAZARE.webp" alt="Nazaré">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_7_title">Nazaré</h3>
+                        <p class="route-desc" data-i18n="route_7_desc">Viva um momento inesquecível nesta vila
+                            piscatória conhecida mundialmente pelas suas ondas gigantes!</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 8: Portinho da Arrábida -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./PORTINHO DA ARRÁBIDA.webp" alt="Portinho da Arrábida">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_8_title">Portinho da Arrábida</h3>
+                        <p class="route-desc" data-i18n="route_8_desc">Situada no Parque Natural da Serra da Arrábida, a
+                            Praia do Portinho é uma das mais bonitas de Portugal. As suas areias brancas e finas e os
+                            variados tons de azul das águas límpidas contrastam com a verdejante vegetação da Serra,
+                            formando um belíssimo cenário.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 9: Aveiro -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./AVEIRO.webp" alt="Aveiro">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="route_9_title">Aveiro</h3>
+                        <p class="route-desc" data-i18n="route_9_desc">Conhecida como a "Veneza Portuguesa", Aveiro é
+                            famosa pelos seus canais urbanos navegados por barcos moliceiros e pela sua forte ligação à
+                            ria e ao sal.</p>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_transport_return">Transporte de
+                                    ida e volta</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_ac">Veículo com ar
+                                    condicionado</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_insurance">Seguro pessoal</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="inc_free_time">Tempo livre para
+                                    explorar</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_lunch">Almoço</span></li>
+                            <li class="excluded"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="exc_tickets_monuments">Bilhetes para monumentos</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="content-split">
+                <div class="split-text scroll-reveal">
+                    <h2 class="section-title" data-i18n="about_title">Sobre Nós</h2>
+                    <p class="section-subtitle" style="margin: 0 0 20px 0; text-align: left;"
+                        data-i18n="about_subtitle">Mais do que transporte, entregamos tranquilidade.</p>
+                    <p style="margin-bottom: 15px; color: var(--text-muted);" data-i18n="about_p1">A Etransfers nasceu
+                        com o objetivo de oferecer serviços de transfers privados fiáveis, pontuais e confortáveis,
+                        adaptados às necessidades de cada cliente. Trabalhamos com foco na qualidade do serviço, na
+                        atenção ao detalhe e numa experiência simples desde a reserva até ao destino final.</p>
+                    <p style="margin-bottom: 25px; color: var(--text-muted);" data-i18n="about_p2">A nossa equipa é
+                        composta por motoristas experientes e certificados, com profundo conhecimento dos percursos e do
+                        funcionamento local, garantindo viagens seguras, eficientes e sem preocupações, seja em
+                        deslocações de lazer ou profissionais.</p>
+
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="about_feat_1">Motoristas
+                                Certificados</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="about_feat_2">Atendimento
+                                24/7</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="about_feat_3">Pontualidade
+                                Garantida</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="split-image scroll-reveal">
+                    <img src="./Sobre nós.webp" alt="ETransfers Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comfort Section (Split Layout) -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="content-split">
+                <div class="split-image scroll-reveal">
+                    <img src="./Sobre o Veículo.webp" alt="Interior carro luxo">
+                </div>
+                <div class="split-text scroll-reveal">
+                    <h2 class="section-title text-white" data-i18n="comfort_title">Conforto de Primeira Classe</h2>
+                    <p class="text-white-dim" data-i18n="comfort_desc">Veículo moderno, seguro e adaptável às
+                        necessidades de diferentes clientes.</p>
+
+                    <ul class="comfort-list">
+                        <li>
+                            <i class="fa-solid fa-van-shuttle"></i>
+                            <div>
+                                <h3 data-i18n="comf_seats">Carrinha de 9 lugares</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-suitcase"></i>
+                            <div>
+                                <h3 data-i18n="comf_luggage">Capacidade para até 10 malas</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-snowflake"></i>
+                            <div>
+                                <h3 data-i18n="comf_ac">Ar condicionado</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-user-shield"></i>
+                            <div>
+                                <h3 data-i18n="comf_windows">Vidros traseiros</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-baby"></i>
+                            <div>
+                                <h3 data-i18n="comf_child_seats">Cadeiras para crianças</h3>
+                                <p data-i18n="comf_child_seats_desc">(mediante solicitação)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bottle-water"></i>
+                            <div>
+                                <h3 data-i18n="comf_water">Águas</h3>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Complementary Section -->
+    <section id="complementary" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="comp_title">Passeios de Barco e Serviços de Skipper</h2>
+                <p class="section-subtitle" data-i18n="comp_subtitle">Experiências exclusivas para atender todas as suas
+                    necessidades.</p>
+            </div>
+
+            <div class="routes-grid">
+                <!-- Card 1 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./Pack Diversão TOP MAX.webp" alt="Pack Diversão TOP MAX">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="comp_1_title">Pack Diversão Top Max</h3>
+                        <p data-i18n="comp_1_desc">Embarque num passeio inesquecível ao longo da costa, com destino à
+                            Praia da Ponta dos Corvos, no Seixal, ou à Praia da Giribita, em Paço D’Arcos...</p>
+
+                        <div class="service-info">
+                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
+                            <ul>
+                                <li data-i18n="comp_1_departure">Partida: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_1_arrival">Chegada: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_1_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
+                                <li data-i18n="comp_1_max_pax">Número máximo de ocupantes: 8 pessoas</li>
+                                <li data-i18n="comp_1_duration">Duração: 03h00</li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./Pack Diversão TOP ECONÓMICO.webp" alt="Pack Diversão TOP ECONÓMICO">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="comp_2_title">Pack Diversão Top Económico</h3>
+                        <p data-i18n="comp_2_desc">Trata-se de um passeio costeiro de barco com destino à Praia da Ponta
+                            dos Corvos (Seixal)...</p>
+
+                        <div class="service-info">
+                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
+                            <ul>
+                                <li data-i18n="comp_2_departure">Partida: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_2_arrival">Chegada: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_2_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
+                                <li data-i18n="comp_2_max_pax">Número máximo de ocupantes: 8 pessoas</li>
+                                <li data-i18n="comp_2_duration">Duração: 02h00</li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./Pack Diversão EXCLUSIVE.webp" alt="Pack Diversão EXCLUSIVE">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="comp_3_title">Pack Diversão Exclusive</h3>
+                        <p data-i18n="comp_3_desc">Este pack é perfeito para navegar ao longo da bela costa entre Lisboa
+                            e Cascais...</p>
+
+                        <div class="service-info">
+                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
+                            <ul>
+                                <li data-i18n="comp_3_departure">Partida: Doca de Oeiras</li>
+                                <li data-i18n="comp_3_arrival">Chegada: Doca de Oeiras</li>
+                                <li style="color: #ef5350;" data-i18n="comp_3_note">Nota: Informamos que, neste local, é
+                                    aplicada uma taxa de embarque...</li>
+                                <li data-i18n="comp_3_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
+                                <li data-i18n="comp_3_max_pax">Número máximo de ocupantes: 6 pessoas</li>
+                                <li data-i18n="comp_3_duration">Duração: 4h</li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./Pack Cultural.webp" alt="Pack Cultural">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="comp_4_title">Pack Cultural</h3>
+                        <p data-i18n="comp_4_desc">Este pack para além de um belo passeio permite a observação de marcos
+                            históricos...</p>
+
+                        <div class="service-info">
+                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
+                            <ul>
+                                <li data-i18n="comp_4_departure">Partida: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_4_arrival">Chegada: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_4_min_pax">Mínimo de ocupantes: 2 pessoas</li>
+                                <li data-i18n="comp_4_max_pax">Máximo de ocupantes: 8 Pessoas</li>
+                                <li data-i18n="comp_4_duration">Duração: 1h30</li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./Pack BUGIAR.webp" alt="Pack BUGIAR">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="comp_5_title">Pack Bugiar</h3>
+                        <p data-i18n="comp_5_desc">Este pack inclui a observação de um dos monumentos mais importantes
+                            da história...</p>
+
+                        <div class="service-info">
+                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
+                            <ul>
+                                <li data-i18n="comp_5_departure">Partida: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_5_arrival">Chegada: Doca do Bom Sucesso</li>
+                                <li data-i18n="comp_5_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
+                                <li data-i18n="comp_5_max_pax">Número máximo de ocupantes: 6 pessoas</li>
+                                <li data-i18n="comp_5_duration">Duração: 1h30m aproximadamente</li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="route-card scroll-reveal">
+                    <div class="card-image">
+                        <img src="./Aluguer de Embarcação sem Skipper.webp" alt="Aluguer de Embarcação sem Skipper">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="comp_6_title">Aluguer de Embarcação sem Skipper</h3>
+                        <p data-i18n="comp_6_desc">Para quem tem carta de navegação, mas não um barco próprio! Agora
+                            pode desfrutar...</p>
+
+                        <div class="service-info">
+                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
+                            <ul>
+                                <li data-i18n="comp_6_rates_title">Vários packs de várias horas disponíveis.</li>
+                                <li style="line-height: 1.4; margin-top: 15px;" data-i18n="comp_6_note">Antes da
+                                    partida, será recebido
+                                    por um responsável que fornecerá...</li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="reviews_title">O que dizem nossos clientes</h2>
+            </div>
+
+            <div class="carousel-container">
+                <button class="slider-btn prev" id="prevReview" aria-label="Avaliação anterior"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-track" id="reviewTrack">
+                        <!-- Review 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-body">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text" data-i18n="review_1">"Serviço de excelência..."</p>
+                                <div class="reviewer">
+                                    <div>
+                                        <span class="name" data-i18n="review_1_author">Marta S.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-body">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text" data-i18n="review_2">"Processo de reserva simples..."</p>
+                                <div class="reviewer">
+                                    <div>
+                                        <span class="name" data-i18n="review_2_author">João R.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-body">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text" data-i18n="review_3">"Transfer rápido, seguro..."</p>
+                                <div class="reviewer">
+                                    <div>
+                                        <span class="name" data-i18n="review_3_author">Ana e Ricardo M.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-body">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text" data-i18n="review_4">"Excelente relação qualidade-preço..."</p>
+                                <div class="reviewer">
+                                    <div>
+                                        <span class="name" data-i18n="review_4_author">Carlos F.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-body">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text" data-i18n="review_5">"Utilizamos a Etransfers..."</p>
+                                <div class="reviewer">
+                                    <div>
+                                        <span class="name" data-i18n="review_5_author">Sofia L.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-btn next" id="nextReview" aria-label="Próxima avaliação"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="faq_title">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span data-i18n="faq_1_q">O que é a ETransfers?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p data-i18n="faq_1_a">A ETransfers é uma empresa especializada em serviços de transfer...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span data-i18n="faq_2_q">Que tipos de transfers a ETransfers disponibiliza?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p data-i18n="faq_2_a">A ETransfers oferece transfers de aeroporto, transfers privados...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span data-i18n="faq_3_q">A ETransfers realiza transfers de e para aeroportos?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p data-i18n="faq_3_a">Sim. A ETransfers efetua transfers de e para aeroportos...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span data-i18n="faq_4_q">Os transfers da ETransfers são privados?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">
+                        <p data-i18n="faq_4_a">A maioria dos serviços são transfers privados...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                        <span data-i18n="faq_5_q">Em que zonas a ETransfers opera?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5">
+                        <p data-i18n="faq_5_a">A ETransfers opera em Portugal, realizando transfers entre aeroportos...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+                        <span data-i18n="faq_6_q">Como posso reservar um transfer com a ETransfers?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6">
+                        <p data-i18n="faq_6_a">A reserva de um transfer com a ETransfers pode ser feita de forma
+                            simples...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+                        <span data-i18n="faq_7_q">Os preços dos transfers são fixos?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-7">
+                        <p data-i18n="faq_7_a">Sim. Os preços dos transfers da ETransfers são fixos e transparentes...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+                        <span data-i18n="faq_8_q">Os motoristas da ETransfers são profissionais?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-8">
+                        <p data-i18n="faq_8_a">Sim. Todos os motoristas da ETransfers são profissionais e experientes...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+                        <span data-i18n="faq_9_q">A ETransfers acompanha atrasos de voos?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-9">
+                        <p data-i18n="faq_9_a">Sim. A ETransfers faz monitorização de voos em tempo real...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
+                        <span data-i18n="faq_10_q">Os veículos da ETransfers são confortáveis e seguros?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-10">
+                        <p data-i18n="faq_10_a">Sim. A frota da ETransfers é composta por veículos modernos e
+                            confortáveis...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-11">
+                        <span data-i18n="faq_11_q">A ETransfers disponibiliza cadeiras para crianças?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-11">
+                        <p data-i18n="faq_11_a">Sim. Mediante pedido prévio, a ETransfers disponibiliza cadeiras auto...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-12">
+                        <span data-i18n="faq_12_q">É possível transportar bagagem volumosa?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-12">
+                        <p data-i18n="faq_12_a">Sim. A ETransfers permite o transporte de bagagem volumosa...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
+                        <span data-i18n="faq_13_q">A ETransfers realiza transfers turísticos?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-13">
+                        <p data-i18n="faq_13_a">Sim. A ETransfers disponibiliza transfers turísticos personalizados...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-14">
+                        <span data-i18n="faq_14_q">Posso alterar ou cancelar uma reserva?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-14">
+                        <p data-i18n="faq_14_a">Sim. É possível alterar ou cancelar uma reserva de transfer...</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-15">
+                        <span data-i18n="faq_15_q">Porque devo escolher a ETransfers?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-15">
+                        <p data-i18n="faq_15_a">A ETransfers destaca-se pela pontualidade, conforto e preços
+                            competitivos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper centered-contact">
+                <div class="contact-header">
+                    <h2 class="section-title text-white" data-i18n="contact_title">Entre em Contato</h2>
+                    <p class="section-subtitle text-white-dim" data-i18n="contact_desc">Tire suas dúvidas ou faça um
+                        orçamento sem
+                        compromisso.</p>
+                </div>
+
+                <div class="contact-actions-grid">
+                    <!-- Phone / WhatsApp -->
+                    <a href="https://wa.me/351968224687" target="_blank" class="contact-card action-whatsapp">
+                        <div class="icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                        <h3 data-i18n="contact_phone_title">WhatsApp / Telefone</h3>
+                        <p>+351 968 224 687</p>
+                        <span class="action-btn">Conversar Agora</span>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:e.transfers.sintra@gmail.com" class="contact-card action-email">
+                        <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                        <h3 data-i18n="contact_email_title">Email</h3>
+                        <p>e.transfers.sintra@gmail.com</p>
+                        <span class="action-btn">Enviar Email</span>
+                    </a>
+
+                    <!-- Location -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=Sintra,Portugal" target="_blank"
+                        class="contact-card action-location">
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3 data-i18n="contact_address_title">Endereço</h3>
+                        <p>Sintra, Portugal</p>
+                        <span class="action-btn">Ver no Mapa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col">
+                    <a href="#" class="logo-footer">
+                        <img src="./Etransfer.pt.svg" alt="ETransfers" style="height: 60px; width: auto;">
+                    </a>
+                    <p data-i18n="footer_desc" class="footer-desc">O seu parceiro de confiança em mobilidade e turismo
+                        em
+                        Portugal.</p>
+                    <div class="social-links brand-social">
+                        <a href="https://www.instagram.com/etransfers_sintra?igsh=NzljeXQ1ZnUxb2k=" target="_blank"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+
+                        <a href="https://wa.me/351968224687" target="_blank" aria-label="WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_links">Links Rápidos</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#hero" data-i18n="nav_home">Início</a></li>
+                        <li><a href="#services" data-i18n="nav_services">Serviços</a></li>
+                        <li><a href="#routes" data-i18n="nav_routes">Tours</a></li>
+                        <li><a href="#complementary" data-i18n="nav_skipper">Skipper</a></li>
+                        <li><a href="#contact" data-i18n="nav_book">Reservar</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal / Info -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#faq" data-i18n="faq_title">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Short -->
+                <div class="footer-col">
+                    <h4 data-i18n="contact_title">Entre em Contacto</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+351968224687">+351 968 224 687</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+351967241220">+351 967 241 220</a></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a
+                                href="mailto:e.transfers.sintra@gmail.com">e.transfers.sintra@gmail.com</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Sintra, Portugal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 Etransfers. Todos os direitos reservados. Desenvolvido por
+                    <a href="https://webmari.pt" target="_blank"
+                        style="color: inherit; text-decoration: none;">Webmari.pt</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Eva -->
+    <button class="chatbot-fab" onclick="toggleChat()" aria-label="Abrir Chatbot">
+        <i class="fa-solid fa-comments"></i>
+    </button>
+
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chat-header">
+            <div class="chat-profile">
+                <div class="chat-avatar">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="chat-info">
+                    <h3>Eva</h3>
+                    <span data-i18n="chat_status">Online</span>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()" aria-label="Fechar Chat">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be injected here -->
+        </div>
+        <div class="chat-options" id="chat-options">
+            <!-- Options will be injected here -->
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+            <h3 class="modal-title" data-i18n="popup_title">Fale Connosco</h3>
+            <p class="modal-subtitle" data-i18n="popup_subtitle">Escolha como prefere entrar em contacto:</p>
+
+            <div class="modal-buttons">
+                <a href="https://wa.me/351968224687" target="_blank" class="modal-btn whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="popup_whatsapp">WhatsApp</span>
+                </a>
+                <a href="tel:+351968224687" class="modal-btn phone">
+                    <i class="fa-solid fa-phone"></i> <span data-i18n="popup_phone">Ligar Agora</span>
+                </a>
+                <a href="mailto:e.transfers.sintra@gmail.com" class="modal-btn email">
+                    <i class="fa-solid fa-envelope"></i> <span data-i18n="popup_email">Enviar Email</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
