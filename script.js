@@ -1,4 +1,17 @@
-﻿const translations = {
+﻿
+/* =========================================
+   SCRIPT.JS - Main Javascript File
+   1. Translations (i18n)
+   2. DOM Elements & State
+   3. Navigation Logic
+   4. Scroll Animations
+   5. Testimonials Carousel
+   6. FAQ Accordion
+   7. Contact Form & Chatbot (Eva)
+   8. Exit Intent Modal
+   ========================================= */
+
+const translations = {
     pt: {
         nav_home: "Início",
         nav_routes: "Tours",
@@ -260,7 +273,13 @@
         popup_email: "Enviar Email",
         wa_interest_msg: "Olá! Gostaria de saber mais sobre: ",
         wa_site_msg: "Olá! Visitei o vosso site e gostaria de obter mais informações.",
-        footer_copyright: "&copy; 2026 Etransfers. Todos os direitos reservados. Desenvolvido por <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>"
+        footer_copyright: "&copy; 2026 Etransfers. Todos os direitos reservados. Desenvolvido por <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
+        // Exit Intent
+        exit_title: "Espere! Não vá ainda!",
+        exit_subtitle: "Tem dúvidas sobre o seu transfer? Fale diretamente com nossa equipe agora e receba resposta imediata.",
+        exit_btn_wa: "Falar no WhatsApp Agora",
+        exit_btn_email: "Enviar Email",
+        exit_disclaimer: "Atendimento humano e personalizado."
     },
     en: {
         nav_home: "Home",
@@ -523,7 +542,13 @@
         popup_email: "Send Email",
         wa_interest_msg: "Hello! I would like to know more about: ",
         wa_site_msg: "Hello! I visited your website and would like more information.",
-        footer_copyright: "&copy; 2026 Etransfers. All rights reserved. Developed by <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>"
+        footer_copyright: "&copy; 2026 Etransfers. All rights reserved. Developed by <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
+        // Exit Intent
+        exit_title: "Wait! Don't go yet!",
+        exit_subtitle: "Have questions about your transfer? Speak directly with our team now for an immediate response.",
+        exit_btn_wa: "Chat on WhatsApp Now",
+        exit_btn_email: "Send Email",
+        exit_disclaimer: "Personalized human support."
     },
     es: {
         nav_home: "Inicio",
@@ -786,7 +811,13 @@
         popup_email: "Enviar Email",
         wa_interest_msg: "¡Hola! Me gustaría saber más sobre: ",
         wa_site_msg: "¡Hola! Visité su sitio web y me gustaría obtener más información.",
-        footer_copyright: "&copy; 2026 Etransfers. Todos los derechos reservados. Desarrollado por <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>"
+        footer_copyright: "&copy; 2026 Etransfers. Todos los derechos reservados. Desarrollado por <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
+        // Exit Intent
+        exit_title: "¡Espere! ¡No se vaya todavía!",
+        exit_subtitle: "¿Tiene dudas sobre su traslado? Hable directamente con nuestro equipo ahora y reciba respuesta inmediata.",
+        exit_btn_wa: "Hablar por WhatsApp Ahora",
+        exit_btn_email: "Enviar Email",
+        exit_disclaimer: "Atención humana y personalizada."
     },
     fr: {
         nav_home: "Accueil",
@@ -1048,7 +1079,13 @@
         popup_email: "Envoyer Email",
         wa_interest_msg: "Bonjour ! J'aimerais en savoir plus sur : ",
         wa_site_msg: "Bonjour ! J'ai visité votre site web et je voudrais plus d'informations.",
-        footer_copyright: "&copy; 2026 Etransfers. Tous droits réservés. Développé par <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>"
+        footer_copyright: "&copy; 2026 Etransfers. Tous droits réservés. Développé par <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
+        // Exit Intent
+        exit_title: "Attendez ! Ne partez pas tout de suite !",
+        exit_subtitle: "Vous avez des questions sur votre transfert ? Parlez directement avec notre équipe maintenant pour une réponse immédiate.",
+        exit_btn_wa: "Discuter sur WhatsApp",
+        exit_btn_email: "Envoyer un Email",
+        exit_disclaimer: "Support humain et personnalisé."
     }
 };
 
@@ -1773,3 +1810,78 @@ window.onload = function () {
 })();
 
 
+
+// =========================================
+// EXIT INTENT LOGIC
+// =========================================
+// Exit Intent Logic (Updated)
+document.addEventListener('DOMContentLoaded', () => {
+    const exitModal = document.getElementById('exit-intent-modal');
+    const exitCloseBtn = document.querySelector('.exit-modal-close');
+    const exitWaBtn = document.getElementById('exit-wa-btn');
+
+    if (!exitModal) {
+        return;
+    }
+
+    // Configure WhatsApp Link with localized message
+    const setupWaLink = () => {
+        if (!exitWaBtn) return;
+
+        const lang = localStorage.getItem('selectedLang') || 'pt';
+        const waNumber = "351968224687";
+
+        const msgMap = {
+            pt: "Olá! Estava visitando o site ETransfers e tenho algumas dúvidas. Poderiam me ajudar?",
+            en: "Hello! I was visiting the ETransfers website and I have some questions. Could you help me?",
+            es: "¡Hola! Estaba visitando el sitio web de ETransfers y tengo algunas dudas. ¿Podrían ayudarme?",
+            fr: "Bonjour ! Je visitais le site ETransfers et j'ai quelques questions. Pourriez-vous m'aider ?"
+        };
+
+        const msg = msgMap[lang] || msgMap.pt;
+        const encodedText = encodeURIComponent(msg);
+        exitWaBtn.href = `https://wa.me/${waNumber}?text=${encodedText}`;
+    };
+
+    // Show Modal Function
+    const showExitModal = () => {
+        try {
+            // Check if already shown in this session/storage
+            if (!localStorage.getItem('exitIntentShown')) {
+                setupWaLink(); // Update link before showing
+                exitModal.classList.add('active');
+                localStorage.setItem('exitIntentShown', 'true');
+            }
+        } catch (e) {
+            // If localStorage is disabled (private mode), just show the modal
+            // or fail silently. We'll choose to show it to be safe.
+            setupWaLink();
+            exitModal.classList.add('active');
+        }
+    };
+
+    // Close Modal Function
+    const closeExitModal = () => {
+        exitModal.classList.remove('active');
+    };
+
+    // Event Listener for Mouse Out (Better for Exit Intent)
+    document.addEventListener('mouseout', (e) => {
+        // If relatedTarget is null, it means we left the window
+        if (!e.relatedTarget && e.clientY <= 0) {
+            showExitModal();
+        }
+    });
+
+    // Close listeners
+    if (exitCloseBtn) {
+        exitCloseBtn.addEventListener('click', closeExitModal);
+    }
+
+    // Close on overlay click
+    exitModal.addEventListener('click', (e) => {
+        if (e.target === exitModal) {
+            closeExitModal();
+        }
+    });
+});
