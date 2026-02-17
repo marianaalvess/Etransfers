@@ -276,7 +276,7 @@ const translations = {
         footer_copyright: "&copy; 2026 Etransfers. Todos os direitos reservados. Desenvolvido por <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
         // Exit Intent
         exit_title: "Espere! Não vá ainda!",
-        exit_subtitle: "Tem dúvidas sobre o seu transfer? Fale diretamente com nossa equipe agora e receba resposta imediata.",
+        exit_subtitle: "Tem dúvidas sobre o seu transfer? <br> Fale diretamente com nossa equipa agora e receba resposta imediata.",
         exit_btn_wa: "Falar no WhatsApp Agora",
         exit_btn_email: "Enviar Email",
         exit_disclaimer: "Atendimento humano e personalizado."
@@ -545,7 +545,7 @@ const translations = {
         footer_copyright: "&copy; 2026 Etransfers. All rights reserved. Developed by <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
         // Exit Intent
         exit_title: "Wait! Don't go yet!",
-        exit_subtitle: "Have questions about your transfer? Speak directly with our team now for an immediate response.",
+        exit_subtitle: "Have questions about your transfer? <br> Speak directly with our team now for an immediate response.",
         exit_btn_wa: "Chat on WhatsApp Now",
         exit_btn_email: "Send Email",
         exit_disclaimer: "Personalized human support."
@@ -814,7 +814,7 @@ const translations = {
         footer_copyright: "&copy; 2026 Etransfers. Todos los derechos reservados. Desarrollado por <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
         // Exit Intent
         exit_title: "¡Espere! ¡No se vaya todavía!",
-        exit_subtitle: "¿Tiene dudas sobre su traslado? Hable directamente con nuestro equipo ahora y reciba respuesta inmediata.",
+        exit_subtitle: "¿Tiene dudas sobre su traslado? <br> Hable directamente con nuestro equipo ahora y reciba respuesta inmediata.",
         exit_btn_wa: "Hablar por WhatsApp Ahora",
         exit_btn_email: "Enviar Email",
         exit_disclaimer: "Atención humana y personalizada."
@@ -1082,7 +1082,7 @@ const translations = {
         footer_copyright: "&copy; 2026 Etransfers. Tous droits réservés. Développé par <a href='https://webmari.pt' target='_blank' style='text-decoration: underline;'>Webmari.pt</a>",
         // Exit Intent
         exit_title: "Attendez ! Ne partez pas tout de suite !",
-        exit_subtitle: "Vous avez des questions sur votre transfert ? Parlez directement avec notre équipe maintenant pour une réponse immédiate.",
+        exit_subtitle: "Vous avez des questions sur votre transfert ? <br> Parlez directement avec notre équipe maintenant pour une réponse immédiate.",
         exit_btn_wa: "Discuter sur WhatsApp",
         exit_btn_email: "Envoyer un Email",
         exit_disclaimer: "Support humain et personnalisé."
