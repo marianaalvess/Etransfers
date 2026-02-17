@@ -1446,6 +1446,28 @@ window.onload = function () {
     }
 };
 
+// =========================================
+// PREVENT ACCIDENTAL TAB CLOSURE
+// =========================================
+// Chrome, Edge, Firefox, Safari - Modern approach
+window.onbeforeunload = function (e) {
+    // Only block if the form has been interacted with (or always if desired)
+    // For now, always block as requested
+
+    // Standard return value (some browsers show this, others don't)
+    var msg = 'Are you sure you want to leave?';
+
+    e = e || window.event;
+
+    // For IE and Firefox prior to 4
+    if (e) {
+        e.returnValue = msg;
+    }
+
+    // For Safari
+    return msg;
+};
+
 
 
 // =========================================
