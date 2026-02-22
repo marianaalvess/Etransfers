@@ -18,6 +18,7 @@ const translations = {
         nav_skipper: "Passeios de Barco",
         nav_services: "Serviços",
         nav_book: "Reservar",
+        top_bar_text: "Empresa 100% Portuguesa | RNAVT 13012 • RNAAT 1188/2024",
         hero_title: "A sua viagem começa com um <span class='highlight'>sorriso.</span>",
         hero_subtitle: "Conforto, segurança e pontualidade. O transfer que merece.",
         hero_cta_primary: "Agendar Agora",
@@ -287,6 +288,7 @@ const translations = {
         nav_skipper: "Boat Tours",
         nav_services: "Services",
         nav_book: "Book Now",
+        top_bar_text: "100% Portuguese Company | RNAVT 13012 • RNAAT 1188/2024",
         hero_title: "Your journey begins with a <span class='highlight'>smile.</span>",
         hero_subtitle: "Comfort, safety, and punctuality. The transfer you deserve.",
         hero_cta_primary: "Book Now",
@@ -556,6 +558,7 @@ const translations = {
         nav_skipper: "Paseos en Barco",
         nav_services: "Servicios",
         nav_book: "Reservar",
+        top_bar_text: "Empresa 100% Portuguesa | RNAVT 13012 • RNAAT 1188/2024",
         hero_title: "Su viaje empieza con una <span class='highlight'>sonrisa.</span>",
         hero_subtitle: "Confort, seguridad y puntualidad. El traslado que usted merece.",
         hero_cta_primary: "Reservar Ahora",
@@ -825,6 +828,7 @@ const translations = {
         nav_services: "Services",
         nav_skipper: "Promenades en Bateau",
         nav_book: "Réserver",
+        top_bar_text: "Entreprise 100% Portugaise | RNAVT 13012 • RNAAT 1188/2024",
         hero_title: "Votre voyage commence par un <span class='highlight'>sourire.</span>",
         hero_subtitle: "Confort, sécurité et ponctualité. Le transfert que vous méritez.",
         hero_cta_primary: "Réserver Maintenant",
@@ -1090,6 +1094,21 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // =========================================
+    // TOP BAR / NAVBAR SCROLL LOGIC
+    // =========================================
+    const navbar = document.querySelector('.navbar');
+    const topBar = document.querySelector('.top-bar');
+    if (navbar && topBar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > topBar.offsetHeight) {
+                navbar.classList.add('fixed');
+            } else {
+                navbar.classList.remove('fixed');
+            }
+        });
+    }
 
     // =========================================
     // 0. FAQ ACCORDION (Moved to top for priority)

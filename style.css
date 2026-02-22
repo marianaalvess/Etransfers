@@ -162,16 +162,47 @@ img {
 /* =========================================
    3. NAVIGATION
    ========================================= */
-.navbar {
-   position: fixed;
+.header-wrapper {
+   position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    z-index: 1000;
+}
+
+.top-bar {
+   background-color: var(--primary-dark);
+   color: var(--white);
+   text-align: center;
+   padding: 8px 15px;
+   font-size: 0.85rem;
+   font-weight: 500;
+}
+
+.navbar {
+   width: 100%;
    background-color: rgba(255, 255, 255, 0.95);
    backdrop-filter: blur(10px);
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
    padding: 15px 0;
+   z-index: 1000;
+}
+
+.navbar.fixed {
+   position: fixed;
+   top: 0;
+   left: 0;
+   animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+   from {
+      transform: translateY(-100%);
+   }
+
+   to {
+      transform: translateY(0);
+   }
 }
 
 .navbar .container {
@@ -314,7 +345,7 @@ img {
    display: flex;
    align-items: center;
    color: var(--white);
-   padding-top: 80px;
+   padding-top: 116px;
 }
 
 .hero-bg {
@@ -1307,6 +1338,20 @@ img {
 .footer-contacts i,
 .footer-contacts svg {
    color: var(--primary-color);
+}
+
+.footer-top-bar-info {
+   text-align: center;
+   margin-bottom: 30px;
+   padding-top: 30px;
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-top-bar-info p {
+   color: var(--primary-color);
+   font-weight: 700;
+   font-size: 1.1rem;
+   margin: 0;
 }
 
 .footer-bottom {
