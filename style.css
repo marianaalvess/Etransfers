@@ -179,6 +179,25 @@ img {
    font-weight: 500;
 }
 
+.mobile-break {
+   display: none;
+}
+
+.desktop-separator {
+   display: inline;
+   margin: 0 5px;
+}
+
+@media (max-width: 600px) {
+   .mobile-break {
+      display: block;
+   }
+
+   .desktop-separator {
+      display: none;
+   }
+}
+
 .navbar {
    width: 100%;
    background-color: rgba(255, 255, 255, 0.95);
