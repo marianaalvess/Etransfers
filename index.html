@@ -1441,21 +1441,19 @@ img {
    .content-split {
       grid-template-columns: 1fr;
    }
-
    .split-image {
       width: 100%;
       height: auto;
-      min-height: 280px;
-      background-color: var(--white);
+      overflow: visible;
    }
 
    .split-image img {
       width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: unset;
+      display: block;
    }
 
->>>>>>> 9cbffa0892f2b41db90a98c4af68a4d61844d918
    .contact-wrapper {
       grid-template-columns: 1fr;
    }
