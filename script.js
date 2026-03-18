@@ -1,4 +1,4 @@
-﻿
+
 /* =========================================
    SCRIPT.JS - Main Javascript File
    1. Translations (i18n)
@@ -1175,6 +1175,76 @@ document.addEventListener('DOMContentLoaded', () => {
         if (chatMessages && chatMessages.children.length > 0 && typeof window.initChat === 'function') {
             window.initChat();
         }
+
+        // Update dynamically the Schema Markup (JSON-LD)
+        updateSchemaMarkup(lang);
+    }
+
+    function updateSchemaMarkup(lang) {
+        const t = translations[lang] || translations['pt'];
+
+        // 1. LocalBusiness Schema
+        const localBusinessSchema = {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ETransfers",
+            "url": "https://etransfers.pt/",
+            "telephone": "+351968224687",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Sintra",
+                "addressCountry": "PT"
+            },
+            "image": "https://etransfers.pt/Etransfer.pt.svg",
+            "priceRange": "$$",
+            "openingHours": "Mo-Su 00:00-23:59",
+            "sameAs": [
+                "https://www.instagram.com/etransfers.pt/"
+            ],
+            "logo": "https://etransfers.pt/Etransfer.pt.svg"
+        };
+
+        let fbScript = document.getElementById('schema-localbusiness');
+        if (!fbScript) {
+            fbScript = document.createElement('script');
+            fbScript.id = 'schema-localbusiness';
+            fbScript.type = 'application/ld+json';
+            document.head.appendChild(fbScript);
+        }
+        fbScript.textContent = JSON.stringify(localBusinessSchema, null, 2);
+
+        // 2. FAQPage Schema
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": []
+        };
+
+        // There are 15 FAQs based on translations (faq_1_q to faq_15_q)
+        for (let i = 1; i <= 15; i++) {
+            const question = t[`faq_${i}_q`];
+            const answer = t[`faq_${i}_a`];
+            
+            if (question && answer) {
+                faqSchema.mainEntity.push({
+                    "@type": "Question",
+                    "name": question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": answer
+                    }
+                });
+            }
+        }
+
+        let faqScript = document.getElementById('schema-faq');
+        if (!faqScript) {
+            faqScript = document.createElement('script');
+            faqScript.id = 'schema-faq';
+            faqScript.type = 'application/ld+json';
+            document.head.appendChild(faqScript);
+        }
+        faqScript.textContent = JSON.stringify(faqSchema, null, 2);
     }
 
     // Toggle dropdown on click (for mobile/tablet)
