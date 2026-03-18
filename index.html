@@ -1441,10 +1441,12 @@ img {
    .content-split {
       grid-template-columns: 1fr;
    }
+
    .split-image {
       width: 100%;
       height: auto;
-      overflow: visible;
+      overflow: hidden;
+      border-radius: var(--radius);
    }
 
    .split-image img {
@@ -1459,7 +1461,12 @@ img {
    }
 
    .hero-title {
-      font-size: 3rem;
+      font-size: 2.2rem;
+   }
+
+   .testimonial-card {
+      border-radius: 12px;
+      overflow: hidden;
    }
 }
 
