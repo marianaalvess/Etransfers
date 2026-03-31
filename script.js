@@ -280,7 +280,11 @@ const translations = {
         exit_subtitle: "Tem dúvidas sobre o seu transfer? <br> Fale diretamente com nossa equipa agora e receba resposta imediata.",
         exit_btn_wa: "Falar no WhatsApp Agora",
         exit_btn_email: "Enviar Email",
-        exit_disclaimer: "Atendimento humano e personalizado."
+        exit_disclaimer: "Atendimento humano e personalizado.",
+        cookie_text: "Utilizamos cookies para analisar o tráfego do site (Google Analytics) e melhorar a sua experiência. Ao aceitar, consente com o uso de cookies analíticos.",
+        cookie_policy_link: " Política de Privacidade",
+        cookie_accept: "Aceitar",
+        cookie_reject: "Rejeitar"
     },
     en: {
         nav_home: "Home",
@@ -550,7 +554,11 @@ const translations = {
         exit_subtitle: "Have questions about your transfer? <br> Speak directly with our team now for an immediate response.",
         exit_btn_wa: "Chat on WhatsApp Now",
         exit_btn_email: "Send Email",
-        exit_disclaimer: "Personalized human support."
+        exit_disclaimer: "Personalized human support.",
+        cookie_text: "We use cookies to analyze site traffic (Google Analytics) and improve your experience. By accepting, you consent to the use of analytical cookies.",
+        cookie_policy_link: " Privacy Policy",
+        cookie_accept: "Accept",
+        cookie_reject: "Reject"
     },
     es: {
         nav_home: "Inicio",
@@ -820,7 +828,11 @@ const translations = {
         exit_subtitle: "¿Tiene dudas sobre su traslado? <br> Hable directamente con nuestro equipo ahora y reciba respuesta inmediata.",
         exit_btn_wa: "Hablar por WhatsApp Ahora",
         exit_btn_email: "Enviar Email",
-        exit_disclaimer: "Atención humana y personalizada."
+        exit_disclaimer: "Atención humana y personalizada.",
+        cookie_text: "Utilizamos cookies para analizar el tráfico del sitio (Google Analytics) y mejorar su experiencia. Al aceptar, consiente el uso de cookies analíticas.",
+        cookie_policy_link: " Política de Privacidad",
+        cookie_accept: "Aceptar",
+        cookie_reject: "Rechazar"
     },
     fr: {
         nav_home: "Accueil",
@@ -1089,7 +1101,11 @@ const translations = {
         exit_subtitle: "Vous avez des questions sur votre transfert ? <br> Parlez directement avec notre équipe maintenant pour une réponse immédiate.",
         exit_btn_wa: "Discuter sur WhatsApp",
         exit_btn_email: "Envoyer un Email",
-        exit_disclaimer: "Support humain et personnalisé."
+        exit_disclaimer: "Support humain et personnalisé.",
+        cookie_text: "Nous utilisons des cookies pour analyser le trafic du site (Google Analytics) et améliorer votre expérience. En acceptant, vous consentez à l'utilisation de cookies analytiques.",
+        cookie_policy_link: " Politique de Confidentialité",
+        cookie_accept: "Accepter",
+        cookie_reject: "Refuser"
     }
 };
 
@@ -1999,3 +2015,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// =========================================
+// COOKIE CONSENT BANNER
+// =========================================
+(function initCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+
+    if (!banner) return;
+
+    // Show banner only if no decision yet
+    try {
+        if (!localStorage.getItem('cookieConsent')) {
+            banner.style.display = 'block';
+        }
+    } catch(e) {
+        banner.style.display = 'block';
+    }
+
+    function hideBanner() {
+        banner.style.animation = 'cookieSlideUp 0.3s ease reverse';
+        setTimeout(() => { banner.style.display = 'none'; }, 280);
+    }
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            try { localStorage.setItem('cookieConsent', 'accepted'); } catch(e){}
+            hideBanner();
+            if (typeof loadGA === 'function') loadGA();
+        });
+    }
+
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', () => {
+            try { localStorage.setItem('cookieConsent', 'rejected'); } catch(e){}
+            hideBanner();
+        });
+    }
+})();

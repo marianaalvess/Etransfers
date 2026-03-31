@@ -4,14 +4,21 @@
 <head>
     <meta name="google-site-verification" content="I80Fw-mfxJr9erYNxG_HKs-K4R24rSwk2PfTo7UDoqE" />
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-52628L9482"></script>
+    <!-- Google Analytics - loaded only after cookie consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-52628L9482');
+      function loadGA() {
+        if (document.getElementById('ga-script')) return;
+        var s = document.createElement('script');
+        s.id = 'ga-script';
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-52628L9482';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-52628L9482');
+      }
+      try { if (localStorage.getItem('cookieConsent') === 'accepted') loadGA(); } catch(e){}
     </script>
 
     <meta charset="UTF-8">
@@ -1947,6 +1954,109 @@ img {
       font-size: 1.5rem;
    }
 }
+
+/* =========================================
+   COOKIE CONSENT BANNER
+   ========================================= */
+.cookie-banner {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 9999;
+   background: #1a2332;
+   color: #fff;
+   padding: 18px 20px;
+   box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+   animation: cookieSlideUp 0.4s ease;
+   display: block;
+}
+
+@keyframes cookieSlideUp {
+   from { transform: translateY(100%); opacity: 0; }
+   to   { transform: translateY(0);   opacity: 1; }
+}
+
+.cookie-inner {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+.cookie-icon {
+   font-size: 1.6rem;
+   color: var(--secondary-color);
+   flex-shrink: 0;
+}
+
+.cookie-text {
+   flex: 1;
+   font-size: 0.88rem;
+   line-height: 1.55;
+   color: rgba(255,255,255,0.85);
+   min-width: 200px;
+}
+
+.cookie-text a {
+   color: var(--primary-color);
+   text-decoration: underline;
+}
+
+.cookie-actions {
+   display: flex;
+   gap: 10px;
+   flex-shrink: 0;
+}
+
+.cookie-btn {
+   padding: 10px 22px;
+   border-radius: 50px;
+   font-size: 0.88rem;
+   font-weight: 700;
+   cursor: pointer;
+   border: 2px solid transparent;
+   transition: all 0.25s ease;
+   white-space: nowrap;
+}
+
+.cookie-btn-accept {
+   background-color: var(--primary-color);
+   color: #111827;
+}
+
+.cookie-btn-accept:hover {
+   background-color: var(--primary-dark);
+   color: #fff;
+}
+
+.cookie-btn-reject {
+   background-color: transparent;
+   border-color: rgba(255,255,255,0.4);
+   color: rgba(255,255,255,0.75);
+}
+
+.cookie-btn-reject:hover {
+   border-color: #fff;
+   color: #fff;
+}
+
+@media (max-width: 640px) {
+   .cookie-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+   }
+   .cookie-actions {
+      width: 100%;
+   }
+   .cookie-btn {
+      flex: 1;
+      text-align: center;
+   }
+}
     </style>
     <!-- SEO Meta Tags -->
     <meta name="keywords"
@@ -3036,6 +3146,7 @@ img {
                     <h4 data-i18n="footer_legal">Legal</h4>
                     <ul class="footer-menu">
                         <li><a href="#faq" data-i18n="faq_title">Perguntas Frequentes</a></li>
+                        <li><a href="privacy-policy.html" data-i18n="footer_privacy">Política de Privacidade</a></li>
                     </ul>
                 </div>
 
@@ -3139,7 +3250,28 @@ img {
         </div>
     </div>
 
-    <script src="script.js?v=2" defer></script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite">
+        <div class="cookie-inner">
+            <i class="fa-solid fa-cookie-bite cookie-icon"></i>
+            <p class="cookie-text" data-i18n="cookie_text">
+                Utilizamos cookies para analisar o tráfego do site (Google Analytics) e melhorar a sua experiência. Ao aceitar, consente com o uso de cookies analíticos.
+            </p>
+            <div class="cookie-actions">
+                <button id="cookie-reject" class="cookie-btn cookie-btn-reject" data-i18n="cookie_reject">Rejeitar</button>
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept" data-i18n="cookie_accept">Aceitar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        try {
+            if (localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        } catch(e) {}
+    </script>
+
+    <script src="script.js?v=3" defer></script>
 </body>
 
 </html>

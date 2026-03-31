@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade & Cookies — ETransfers</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Política de Privacidade e Cookies da ETransfers. Saiba como tratamos os seus dados pessoais.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
+
+    <!-- Font Awesome -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #00C853;
+            --primary-dark: #009624;
+            --secondary-color: #FFAB00;
+            --dark-bg: #111827;
+            --light-bg: #F9FAFB;
+            --text-main: #1F2937;
+            --text-muted: #6B7280;
+            --white: #ffffff;
+            --blue: #0288D1;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0,0,0,0.07);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-main);
+            line-height: 1.7;
+            background: var(--white);
+        }
+
+        a { color: var(--primary-dark); text-decoration: underline; transition: color 0.2s; }
+        a:hover { color: var(--primary-color); }
+
+        img { max-width: 100%; display: block; }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-inner a.back-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .navbar-inner a.back-link:hover { color: var(--primary-color); }
+
+        .logo img { height: 45px; width: auto; }
+
+        /* ── PAGE HEADER ── */
+        .page-header {
+            background: linear-gradient(135deg, #0277bd 0%, #004c8c 100%);
+            color: #fff;
+            padding: 60px 20px 50px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.6rem; }
+        }
+
+        /* ── CONTENT ── */
+        .content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 50px 20px 80px;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+        }
+
+        .policy-section {
+            margin-bottom: 45px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-section h2 i {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        .policy-section h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 20px 0 8px;
+        }
+
+        .policy-section p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .policy-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+
+        .policy-section ul li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding: 5px 0 5px 22px;
+            position: relative;
+        }
+
+        .policy-section ul li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: 700;
+            position: absolute;
+            left: 6px;
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .highlight-box p { margin: 0; font-size: 0.92rem; }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin: 16px 0;
+        }
+
+        .cookie-table th {
+            background: var(--dark-bg);
+            color: #fff;
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .cookie-table th:first-child { border-radius: 8px 0 0 0; }
+        .cookie-table th:last-child  { border-radius: 0 8px 0 0; }
+
+        .cookie-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #eee;
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .cookie-table tr:nth-child(even) td { background: #fafafa; }
+
+        @media (max-width: 600px) {
+            .cookie-table { display: block; overflow-x: auto; }
+        }
+
+        .contact-card {
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .contact-card i {
+            font-size: 1.4rem;
+            color: var(--blue);
+            margin-top: 2px;
+        }
+
+        .contact-card p { margin: 0; font-size: 0.92rem; }
+        .contact-card strong { color: var(--text-main); display: block; margin-bottom: 4px; }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 40px 0;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #0b111e;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.85rem;
+        }
+
+        .footer a { color: rgba(255,255,255,0.7); }
+        .footer a:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Voltar ao site
+            </a>
+            <a href="index.html" class="logo">
+                <img src="./Etransfer.pt.svg" alt="ETransfers" height="45">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1><i class="fa-solid fa-shield-halved"></i> Política de Privacidade & Cookies</h1>
+        <p>ETransfers — RNAVT 13012 • RNAAT 1188/2024</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <span class="last-updated">
+            <i class="fa-regular fa-calendar"></i> Última atualização: Março de 2026
+        </span>
+
+        <!-- 1. Responsável -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-building"></i> 1. Responsável pelo Tratamento dos Dados</h2>
+            <p>O responsável pelo tratamento dos dados pessoais recolhidos através deste website é:</p>
+            <div class="contact-card">
+                <i class="fa-solid fa-id-card"></i>
+                <div>
+                    <strong>ETransfers</strong>
+                    <p>RNAVT 13012 • RNAAT 1188/2024<br>
+                    Sintra, Portugal<br>
+                    Email: <a href="mailto:e.transfers.sintra@gmail.com">e.transfers.sintra@gmail.com</a><br>
+                    Telefone: <a href="tel:+351968224687">+351 968 224 687</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Dados recolhidos -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-database"></i> 2. Que Dados Recolhemos</h2>
+
+            <h3>2.1 Dados de navegação (Google Analytics)</h3>
+            <p>Quando aceita os cookies analíticos, o Google Analytics recolhe automaticamente:</p>
+            <ul>
+                <li>Endereço IP (anonimizado)</li>
+                <li>Páginas visitadas e tempo de permanência</li>
+                <li>Dispositivo, sistema operativo e browser utilizados</li>
+                <li>País/região de origem da visita</li>
+                <li>Fonte de tráfego (como chegou ao site)</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Nota:</strong> Estes dados são recolhidos de forma agregada e anónima. Não identificamos visitantes individualmente. Se rejeitar os cookies, estes dados não são recolhidos.</p>
+            </div>
+
+            <h3>2.2 Dados fornecidos pelo utilizador</h3>
+            <p>Quando nos contacta através do formulário ou do chatbot Eva, recolhemos:</p>
+            <ul>
+                <li>Nome</li>
+                <li>Endereço de email</li>
+                <li>Número de telefone (se fornecido)</li>
+                <li>Mensagem / conteúdo do pedido</li>
+            </ul>
+
+            <h3>2.3 Google Search Console</h3>
+            <p>Utilizamos o Google Search Console para monitorizar o desempenho do site nos resultados de pesquisa do Google. Esta ferramenta <strong>não recolhe dados dos visitantes</strong> — apenas fornece ao proprietário do site informações sobre como o Google indexa as páginas.</p>
+        </div>
+
+        <!-- 3. Finalidade -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-bullseye"></i> 3. Para Que Utilizamos os Dados</h2>
+            <ul>
+                <li>Análise do tráfego e melhoria contínua do site (Google Analytics)</li>
+                <li>Responder a pedidos de contacto, orçamentos e reservas</li>
+                <li>Prestar o serviço de transfer ou passeio solicitado</li>
+                <li>Comunicações relacionadas com reservas confirmadas</li>
+            </ul>
+            <p>Não utilizamos os seus dados para marketing direto sem o seu consentimento expresso.</p>
+        </div>
+
+        <!-- 4. Base legal -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-scale-balanced"></i> 4. Base Legal para o Tratamento</h2>
+            <ul>
+                <li><strong>Consentimento</strong> — cookies analíticos (Google Analytics), recolhido através do banner de cookies</li>
+                <li><strong>Execução de contrato</strong> — dados necessários para processar reservas e prestar o serviço</li>
+                <li><strong>Interesse legítimo</strong> — resposta a contactos e pedidos de informação</li>
+            </ul>
+        </div>
+
+        <!-- 5. Cookies -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-cookie-bite"></i> 5. Política de Cookies</h2>
+            <p>Os cookies são pequenos ficheiros de texto guardados no seu dispositivo. Utilizamos os seguintes:</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie</th>
+                        <th>Tipo</th>
+                        <th>Finalidade</th>
+                        <th>Duração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cookieConsent</code></td>
+                        <td>Essencial</td>
+                        <td>Guarda a sua escolha sobre cookies (aceitar/rejeitar). Necessário para não mostrar o banner repetidamente.</td>
+                        <td>1 ano</td>
+                    </tr>
+                    <tr>
+                        <td><code>selectedLang</code></td>
+                        <td>Funcional</td>
+                        <td>Guarda o idioma selecionado no site.</td>
+                        <td>Sessão</td>
+                    </tr>
+                    <tr>
+                        <td><code>_ga</code></td>
+                        <td>Analítico</td>
+                        <td>Google Analytics — distingue utilizadores únicos.</td>
+                        <td>2 anos</td>
+                    </tr>
+                    <tr>
+                        <td><code>_ga_*</code></td>
+                        <td>Analítico</td>
+                        <td>Google Analytics — mantém o estado da sessão.</td>
+                        <td>2 anos</td>
+                    </tr>
+                    <tr>
+                        <td><code>exitIntentShown</code></td>
+                        <td>Funcional</td>
+                        <td>Regista se o popup de saída já foi mostrado ao utilizador.</td>
+                        <td>Sessão</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Como gerir os cookies</h3>
+            <p>Pode alterar as suas preferências a qualquer momento através do seu browser:</p>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+                <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+                <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+            </ul>
+            <p>Também pode <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">instalar o Add-on de recusa do Google Analytics</a> para impedir a recolha de dados pelo GA em todos os sites.</p>
+        </div>
+
+        <!-- 6. Partilha de dados -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-share-nodes"></i> 6. Partilha de Dados com Terceiros</h2>
+            <p>Não vendemos nem cedemos os seus dados pessoais a terceiros para fins comerciais. Os dados podem ser partilhados apenas com:</p>
+            <ul>
+                <li><strong>Google LLC</strong> — através do Google Analytics (dados de navegação anónimos) e Google Search Console. Consulte a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade da Google</a>.</li>
+                <li><strong>WhatsApp / Meta</strong> — se optar por contactar-nos via WhatsApp. Sujeito à <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">Política de Privacidade do WhatsApp</a>.</li>
+            </ul>
+        </div>
+
+        <!-- 7. Retenção -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-clock"></i> 7. Prazo de Conservação dos Dados</h2>
+            <ul>
+                <li>Dados de contacto e reservas: conservados pelo período necessário à prestação do serviço e cumprimento de obrigações legais (máximo 5 anos)</li>
+                <li>Dados do Google Analytics: 26 meses (configuração padrão)</li>
+                <li>Cookies funcionais: duração indicada na tabela acima</li>
+            </ul>
+        </div>
+
+        <!-- 8. Direitos -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-user-shield"></i> 8. Os Seus Direitos (RGPD)</h2>
+            <p>Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem os seguintes direitos:</p>
+            <ul>
+                <li><strong>Direito de acesso</strong> — saber que dados temos sobre si</li>
+                <li><strong>Direito de retificação</strong> — corrigir dados incorretos ou incompletos</li>
+                <li><strong>Direito ao apagamento</strong> — solicitar a eliminação dos seus dados</li>
+                <li><strong>Direito à portabilidade</strong> — receber os seus dados em formato estruturado</li>
+                <li><strong>Direito de oposição</strong> — opor-se ao tratamento dos seus dados</li>
+                <li><strong>Direito de retirar o consentimento</strong> — a qualquer momento, sem prejuízo do tratamento anterior</li>
+            </ul>
+            <div class="highlight-box">
+                <p>Para exercer qualquer um destes direitos, contacte-nos por email: <a href="mailto:e.transfers.sintra@gmail.com">e.transfers.sintra@gmail.com</a>. Respondemos no prazo máximo de 30 dias.</p>
+            </div>
+            <p>Tem também o direito de apresentar uma reclamação à autoridade de controlo portuguesa: <a href="https://www.cnpd.pt" target="_blank" rel="noopener">Comissão Nacional de Proteção de Dados (CNPD)</a>.</p>
+        </div>
+
+        <!-- 9. Segurança -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-lock"></i> 9. Segurança dos Dados</h2>
+            <p>Implementamos medidas técnicas e organizacionais adequadas para proteger os seus dados pessoais contra acesso não autorizado, perda ou destruição. O site utiliza ligação segura HTTPS.</p>
+        </div>
+
+        <!-- 10. Alterações -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-pen-to-square"></i> 10. Alterações a Esta Política</h2>
+            <p>Podemos atualizar esta política ocasionalmente. Alterações significativas serão comunicadas através de aviso visível no site. A data da última atualização é indicada no topo desta página.</p>
+        </div>
+
+        <hr>
+
+        <!-- Contacto -->
+        <div class="policy-section">
+            <h2><i class="fa-solid fa-envelope"></i> Contacto</h2>
+            <p>Para qualquer questão relacionada com a proteção dos seus dados pessoais:</p>
+            <div class="contact-card">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <strong>ETransfers — Responsável pelos Dados</strong>
+                    <p>
+                        Email: <a href="mailto:e.transfers.sintra@gmail.com">e.transfers.sintra@gmail.com</a><br>
+                        Telefone: <a href="tel:+351968224687">+351 968 224 687</a><br>
+                        Morada: Sintra, Portugal
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ETransfers. Todos os direitos reservados. |
+            <a href="index.html">Início</a> |
+            Desenvolvido por <a href="https://webmari.pt" target="_blank" rel="noopener">Webmari.pt</a>
+        </p>
+    </footer>
+
+</body>
+</html>
