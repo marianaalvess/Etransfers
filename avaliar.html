@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar a ETransfers — Partilhe a Sua Experiência</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="A sua opinião é muito importante para nós. Avalie a ETransfers no Google ou Trustpilot e ajude outros viajantes a escolherem o melhor serviço.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Avaliar a ETransfers">
+    <meta property="og:description" content="Ficou satisfeito com o serviço? Deixe a sua avaliação e ajude-nos a crescer!">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    <!-- Font Awesome -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #00C853;
+            --primary-dark: #009624;
+            --secondary-color: #FFAB00;
+            --dark-bg: #111827;
+            --light-bg: #F9FAFB;
+            --text-main: #1F2937;
+            --text-muted: #6B7280;
+            --white: #ffffff;
+            --blue: #0288D1;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.09);
+            --google-color: #4285F4;
+            --trustpilot-color: #00B67A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; display: block; }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 14px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--primary-color); }
+        .back-link i { font-size: 0.85rem; }
+
+        .logo img { height: 44px; width: auto; }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0b1e12 0%, #0d2b1a 40%, #0f3322 100%);
+            padding: 80px 20px 90px;
+            text-align: center;
+        }
+
+        /* Animated star dots */
+        .stars-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .stars-bg span {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            opacity: 0;
+            animation: twinkle var(--dur, 3s) var(--delay, 0s) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50%       { opacity: 0.7; transform: scale(1); }
+        }
+
+        /* Green glow circles */
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+        .hero::before {
+            width: 420px; height: 420px;
+            background: radial-gradient(circle, rgba(0,200,83,0.18) 0%, transparent 70%);
+            top: -100px; left: -80px;
+        }
+        .hero::after {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, rgba(255,171,0,0.15) 0%, transparent 70%);
+            bottom: -80px; right: -60px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,171,0,0.12);
+            border: 1px solid rgba(255,171,0,0.35);
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 7px 18px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+        }
+
+        .hero-stars {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 26px;
+        }
+
+        .hero-stars i,
+        .hero-stars svg {
+            font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            color: #FFAB00 !important;
+            fill: #FFAB00 !important;
+            filter: drop-shadow(0 0 7px rgba(255,171,0,0.55));
+            animation: starPop 0.5s var(--d, 0s) both cubic-bezier(.36,1.56,.64,1);
+        }
+        @keyframes starPop {
+            from { transform: scale(0) rotate(-20deg); opacity: 0; }
+            to   { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 .accent {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            color: rgba(255,255,255,0.72);
+            max-width: 520px;
+            margin: 0 auto 14px;
+            line-height: 1.7;
+        }
+
+        /* ── MAIN SECTION ── */
+        .review-section {
+            background: var(--light-bg);
+            padding: 70px 20px 80px;
+        }
+
+        .section-label {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-label h2 {
+            font-size: clamp(1.3rem, 3vw, 1.75rem);
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-label p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* ── CARDS GRID ── */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 44px 36px 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.14);
+        }
+
+        /* Top accent bar */
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .review-card.google::before { background: var(--google-color); }
+        .review-card.trustpilot::before { background: var(--trustpilot-color); }
+
+        /* Glow on hover */
+        .review-card.google:hover  { box-shadow: 0 20px 50px rgba(66,133,244,0.18); }
+        .review-card.trustpilot:hover { box-shadow: 0 20px 50px rgba(0,182,122,0.18); }
+
+        .card-icon-wrap {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover .card-icon-wrap {
+            transform: scale(1.08) rotate(-3deg);
+        }
+
+        .review-card.google  .card-icon-wrap { background: #EBF2FF; }
+        .review-card.trustpilot .card-icon-wrap { background: #E6F9F2; }
+
+        .card-icon-wrap img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .card-platform-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .review-card.google  .card-platform-name { color: var(--google-color); }
+        .review-card.trustpilot .card-platform-name { color: var(--trustpilot-color); }
+
+        .review-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .review-card p {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin-bottom: 28px;
+        }
+
+        /* Card stars */
+        .card-stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 30px;
+        }
+        .card-stars i { font-size: 1.1rem; color: var(--secondary-color); }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .card-btn i { font-size: 1rem; }
+
+        .review-card.google .card-btn {
+            background: var(--google-color);
+            color: var(--white);
+        }
+        .review-card.google .card-btn:hover {
+            background: #2b6cc7;
+            transform: scale(1.03);
+        }
+
+        .review-card.trustpilot .card-btn {
+            background: var(--trustpilot-color);
+            color: var(--white);
+        }
+        .review-card.trustpilot .card-btn:hover {
+            background: #009963;
+            transform: scale(1.03);
+        }
+
+        /* Arrow indicator */
+        .card-arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateX(-6px);
+            transition: all 0.3s ease;
+            font-size: 0.75rem;
+        }
+
+        .review-card.google  .card-arrow { background: #EBF2FF; color: var(--google-color); }
+        .review-card.trustpilot .card-arrow { background: #E6F9F2; color: var(--trustpilot-color); }
+
+        .review-card:hover .card-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ── TRUST STRIP ── */
+        .trust-strip {
+            background: var(--white);
+            padding: 36px 20px;
+            border-top: 1px solid #F0F0F0;
+        }
+
+        .trust-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .trust-item i {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        /* ── THANK YOU SECTION ── */
+        .thanks-section {
+            background: linear-gradient(135deg, #0b1e12 0%, #0d2b1a 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .thanks-inner {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .thanks-emoji {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+            display: block;
+            animation: pulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50%       { transform: scale(1.08); }
+        }
+
+        .thanks-section h2 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 14px;
+        }
+
+        .thanks-section p {
+            font-size: 0.98rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: var(--white);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+        .whatsapp-btn:hover {
+            background: #1eba57;
+            transform: translateY(-2px);
+        }
+        .whatsapp-btn i { font-size: 1.1rem; }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #0b111e;
+            color: rgba(255,255,255,0.55);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .footer a:hover { text-decoration: underline; }
+
+        .footer-logo {
+            height: 36px;
+            margin: 0 auto 14px;
+            opacity: 0.75;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 600px) {
+            .hero { padding: 64px 20px 70px; }
+            .hero-stars i { font-size: 1.6rem; }
+            .review-section { padding: 50px 16px 60px; }
+            .review-card { padding: 36px 24px 32px; }
+            .cards-grid { gap: 20px; }
+            .trust-inner { gap: 22px; }
+            .trust-item span { font-size: 0.82rem; }
+            .thanks-section { padding: 50px 20px; }
+        }
+
+        @media (max-width: 400px) {
+            .review-card { padding: 30px 18px 28px; }
+            .card-btn { padding: 13px 22px; font-size: 0.9rem; }
+        }
+
+        /* ── FADE-IN ANIMATION on scroll ── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-up:nth-child(2) { transition-delay: 0.12s; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar ao site
+            </a>
+            <a href="index.html" class="logo">
+                <img src="Etransfer.pt.svg" alt="ETransfers" loading="lazy">
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <!-- Twinkle stars background -->
+        <div class="stars-bg" aria-hidden="true" id="starsContainer"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-trophy"></i>
+                A sua opinião faz a diferença
+            </div>
+
+            <div class="hero-stars" aria-hidden="true">
+                <i class="fa-solid fa-star" style="--d:0.0s"></i>
+                <i class="fa-solid fa-star" style="--d:0.1s"></i>
+                <i class="fa-solid fa-star" style="--d:0.2s"></i>
+                <i class="fa-solid fa-star" style="--d:0.3s"></i>
+                <i class="fa-solid fa-star" style="--d:0.4s"></i>
+            </div>
+
+            <h1>
+                Ficou satisfeito com<br>
+                o nosso <span class="accent">serviço?</span>
+            </h1>
+
+            <p>
+                A sua avaliação ajuda outros viajantes a escolherem a ETransfers
+                com confiança — e motiva a nossa equipa a continuar a fazer melhor.
+            </p>
+        </div>
+    </section>
+
+    <!-- REVIEW CARDS -->
+    <section class="review-section">
+
+        <div class="section-label">
+            <h2>Escolha onde quer avaliar</h2>
+            <p>Toque no botão da plataforma da sua preferência — demora menos de 1 minuto.</p>
+        </div>
+
+        <div class="cards-grid">
+
+            <!-- Google Card -->
+            <a href="https://g.page/r/CTEbPYuwN43REBM/review"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="review-card google fade-up"
+               aria-label="Avaliar no Google">
+
+                <span class="card-arrow" aria-hidden="true">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+
+                <div class="card-icon-wrap">
+                    <!-- Google G inline SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="52" height="52">
+                        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                        <path fill="none" d="M0 0h48v48H0z"/>
+                    </svg>
+                </div>
+
+                <span class="card-platform-name">Google Reviews</span>
+                <h3>Avaliar no Google</h3>
+
+                <div class="card-stars" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    O Google é a plataforma mais consultada do mundo.
+                    A sua avaliação aumenta a nossa visibilidade e credibilidade.
+                </p>
+
+                <span class="card-btn">
+                    <i class="fa-solid fa-star"></i>
+                    Deixar avaliação no Google
+                </span>
+            </a>
+
+            <!-- Trustpilot Card -->
+            <a href="https://www.trustpilot.com/review/etransfers.pt"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="review-card trustpilot fade-up"
+               aria-label="Avaliar no Trustpilot">
+
+                <span class="card-arrow" aria-hidden="true">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+
+                <div class="card-icon-wrap">
+                    <!-- Trustpilot star SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.2 120" width="52" height="52">
+                        <polygon fill="#00B67A" points="126.2,46.2 79.4,46.2 63.1,0 46.8,46.2 0,46.2 37.8,74.7 23.4,120 63.1,92.5 102.8,120 88.4,74.7"/>
+                        <polygon fill="#005128" points="90.5,85 88.4,74.7 63.1,92.5"/>
+                    </svg>
+                </div>
+
+                <span class="card-platform-name">Trustpilot</span>
+                <h3>Avaliar no Trustpilot</h3>
+
+                <div class="card-stars" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    O Trustpilot é a plataforma de referência para avaliações
+                    de empresas. A sua opinião constrói confiança para novos clientes.
+                </p>
+
+                <span class="card-btn">
+                    <i class="fa-solid fa-star"></i>
+                    Deixar avaliação no Trustpilot
+                </span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <div class="trust-inner">
+            <div class="trust-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Menos de 1 minuto</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>100% seguro e gratuito</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-heart"></i>
+                <span>A equipa agradece!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- THANK YOU -->
+    <section class="thanks-section">
+        <div class="thanks-inner">
+            <span class="thanks-emoji" aria-hidden="true">🙏</span>
+            <h2>Obrigado por escolher a ETransfers</h2>
+            <p>
+                A sua confiança é o nosso maior prémio. Esperamos vê-lo novamente
+                em breve — e prometemos continuar a superar as suas expectativas.
+            </p>
+            <a href="https://wa.me/351966178064" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                Falar connosco no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img src="Etransfer.pt.svg" alt="ETransfers" class="footer-logo" loading="lazy">
+        <p>
+            © <span id="year"></span> ETransfers — Empresa 100% Portuguesa &nbsp;|&nbsp;
+            RNAVT 13012 • RNAAT 1188/2024
+        </p>
+        <p style="margin-top:6px;">
+            <a href="index.html">Início</a> &nbsp;·&nbsp;
+            <a href="privacy-policy.html">Política de Privacidade</a>
+        </p>
+    </footer>
+
+    <script>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Twinkle stars
+        const container = document.getElementById('starsContainer');
+        const positions = [
+            {top:'12%',left:'8%'},{top:'25%',left:'90%'},{top:'55%',left:'5%'},
+            {top:'70%',left:'85%'},{top:'40%',left:'50%'},{top:'18%',left:'60%'},
+            {top:'80%',left:'30%'},{top:'10%',left:'40%'},{top:'60%',left:'70%'},
+            {top:'35%',left:'15%'},{top:'85%',left:'55%'},{top:'48%',left:'92%'},
+            {top:'22%',left:'75%'},{top:'65%',left:'20%'},{top:'5%', left:'25%'},
+        ];
+        positions.forEach((pos, i) => {
+            const s = document.createElement('span');
+            const size = 3 + Math.random() * 4;
+            s.style.cssText = `
+                top:${pos.top}; left:${pos.left};
+                width:${size}px; height:${size}px;
+                --dur:${2.5 + Math.random() * 3}s;
+                --delay:${Math.random() * 3}s;
+            `;
+            container.appendChild(s);
+        });
+
+        // Fade-up on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
