@@ -1850,6 +1850,31 @@ img {
    filter: brightness(0) invert(1);
 }
 
+/* Call cost mandatory notice */
+.call-cost-note {
+   display: block;
+   font-size: 0.72rem;
+   color: rgba(255, 255, 255, 0.55);
+   margin-bottom: 12px;
+   letter-spacing: 0.01em;
+}
+
+.call-cost-note-footer {
+   font-size: 0.75rem;
+   color: rgba(255, 255, 255, 0.4);
+   margin-top: 4px;
+   gap: 6px;
+}
+
+.call-cost-note-modal {
+   display: block;
+   font-size: 0.75rem;
+   color: #aaa;
+   margin-top: -8px;
+   margin-bottom: 4px;
+   text-align: center;
+}
+
 /* =========================================
    10. EXIT INTENT MODAL
    ========================================= */
@@ -3081,6 +3106,7 @@ img {
                         <div class="icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
                         <h3 data-i18n="contact_phone_title">WhatsApp / Telefone</h3>
                         <p>+351 968 224 687</p>
+                        <small class="call-cost-note">Chamada para a rede móvel nacional</small>
                         <span class="action-btn">Conversar Agora</span>
                     </a>
 
@@ -3157,6 +3183,7 @@ img {
                     <ul class="footer-contacts">
                         <li><i class="fa-solid fa-phone"></i> <a href="tel:+351968224687">+351 968 224 687</a></li>
                         <li><i class="fa-solid fa-phone"></i> <a href="tel:+351967241220">+351 967 241 220</a></li>
+                        <li class="call-cost-note-footer"><i class="fa-solid fa-circle-info"></i> Chamada para a rede móvel nacional</li>
                         <li><i class="fa-solid fa-envelope"></i> <a
                                 href="mailto:e.transfers.sintra@gmail.com">e.transfers.sintra@gmail.com</a></li>
                         <li><i class="fa-solid fa-location-dot"></i> Sintra, Portugal</li>
@@ -3219,6 +3246,7 @@ img {
                 <a href="tel:+351968224687" class="modal-btn phone">
                     <i class="fa-solid fa-phone"></i> <span data-i18n="popup_phone">Ligar Agora</span>
                 </a>
+                <small class="call-cost-note-modal">Chamada para a rede móvel nacional</small>
                 <a href="mailto:e.transfers.sintra@gmail.com" class="modal-btn email">
                     <i class="fa-solid fa-envelope"></i> <span data-i18n="popup_email">Enviar Email</span>
                 </a>
