@@ -723,6 +723,72 @@ img {
    margin-bottom: 15px;
 }
 
+.google-rating-badge {
+   display: inline-flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   line-height: 1;
+   gap: 10px;
+   margin-top: 18px;
+   padding: 24px 32px;
+   background: var(--white);
+   border: 1px solid #E5E7EB;
+   border-radius: 20px;
+   box-shadow: var(--shadow);
+   text-decoration: none;
+   color: var(--text-main);
+   transition: var(--transition);
+}
+
+.google-rating-badge:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.15);
+   border-color: #D1D5DB;
+}
+
+.google-rating-badge .grb-google-icon {
+   display: block;
+   width: 40px;
+   height: 40px;
+   flex-shrink: 0;
+}
+
+.google-rating-badge .grb-rating-row {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.google-rating-badge .grb-rating {
+   display: inline-flex;
+   align-items: center;
+   font-weight: 800;
+   font-size: 2rem;
+   color: var(--text-main);
+}
+
+.google-rating-badge .grb-stars {
+   display: inline-flex;
+   align-items: center;
+   gap: 4px;
+   color: #FBBC05;
+   font-size: 1.4rem;
+}
+
+.google-rating-badge .grb-stars i {
+   display: inline-flex;
+   align-items: center;
+}
+
+.google-rating-badge .grb-count {
+   display: inline-flex;
+   align-items: center;
+   color: #1976D2;
+   font-weight: 700;
+   font-size: 1.15rem;
+}
+
 .review-text {
    font-style: italic;
    color: var(--text-muted);

@@ -2075,17 +2075,38 @@ img {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": "LocalBusiness",
+          "@id": "https://etransfers.pt/#business",
           "name": "ETransfers",
           "url": "https://etransfers.pt/",
           "logo": "https://etransfers.pt/logo.png",
+          "image": "https://etransfers.pt/logo.png",
           "description": "Transporte turístico e executivo de excelência em Portugal.",
+          "telephone": "+351968224687",
+          "email": "e.transfers.sintra@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sintra",
+            "addressCountry": "PT"
+          },
+          "areaServed": "PT",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+351910000000",
+            "telephone": "+351968224687",
             "contactType": "customer service",
             "areaServed": "PT",
             "availableLanguage": ["Portuguese", "English", "Spanish", "French"]
+          },
+          "sameAs": [
+            "https://www.instagram.com/etransfers.pt/",
+            "https://share.google/JeGkjiLwTyAobnmW2",
+            "https://www.trustpilot.com/review/etransfers.pt"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "reviewCount": "46"
           }
         },
         {
@@ -2102,7 +2123,7 @@ img {
           "@type": "Service",
           "name": "Transfers Privados",
           "provider": {
-            "@type": "Organization",
+            "@type": "LocalBusiness",
             "name": "ETransfers"
           },
           "serviceType": "Transporte de Passageiros",
@@ -2141,7 +2162,7 @@ img {
                         <a href="#routes" class="nav-link" data-i18n="nav_routes">Tours</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#complementary" class="nav-link" data-i18n="nav_skipper">Passeios de Barco</a>
+                        <a href="https://tagusflow.pt/" target="_blank" rel="noopener" class="nav-link" data-i18n="nav_skipper">Passeios de Barco</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link nav-btn" data-i18n="nav_book">Reservar</a>
@@ -2254,6 +2275,46 @@ img {
                     <h3 data-i18n="srv_boat_tours">Passeios de Barco</h3>
                     <p data-i18n="srv_boat_tours_desc">Sinta a liberdade do mar numa experiência vibrante, inesquecível
                         e exclusiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Requested Services Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="req_services_title">Serviços mais requisitados</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <h3 data-i18n="req_services_1_title">Transfers Norte a Sul</h3>
+                    <p data-i18n="req_services_1_desc">Transfers de norte a sul de Portugal.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-earth-europe"></i>
+                    </div>
+                    <h3 data-i18n="req_services_2_title">Transfers para Espanha</h3>
+                    <p data-i18n="req_services_2_desc">Transfers para Espanha.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-plane-up"></i>
+                    </div>
+                    <h3 data-i18n="req_services_3_title">Aeroporto</h3>
+                    <p data-i18n="req_services_3_desc">Monitorização dos voos e receção personalizada.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+                    <h3 data-i18n="req_services_4_title">Eventos Privados</h3>
+                    <p data-i18n="req_services_4_desc">Festas, casamentos e jantares.</p>
                 </div>
             </div>
         </div>
@@ -2537,8 +2598,6 @@ img {
         </div>
     </section>
 
-
-
     <!-- About Us Section -->
     <section id="about" class="section">
         <div class="container">
@@ -2630,166 +2689,74 @@ img {
         </div>
     </section>
 
-    <!-- Services Complementary Section -->
-    <section id="complementary" class="section">
+    <!-- Second Van Section (Comfort Split, same scheme as the 9-seat van) -->
+    <section id="complementary" class="section section-dark">
+        <div class="container">
+            <div class="content-split">
+                <div class="split-image scroll-reveal">
+                    <img src="./carrinha 7 lugares.png" alt="Carrinha de 7 lugares da ETransfers para grupos pequenos" loading="lazy">
+                </div>
+                <div class="split-text scroll-reveal">
+                    <h2 class="section-title text-white" data-i18n="van7_title">Carrinha de 7 Lugares</h2>
+                    <p class="text-white-dim" data-i18n="van7_subtitle">Mais uma opção da nossa frota, ideal para
+                        grupos pequenos.</p>
+
+                    <ul class="comfort-list">
+                        <li>
+                            <i class="fa-solid fa-van-shuttle"></i>
+                            <div>
+                                <h3 data-i18n="van7_seats">Carrinha de 7 lugares</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-suitcase-rolling"></i>
+                            <div>
+                                <h3 data-i18n="van7_pax_luggage">Até 4 passageiros com bagagens</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <h3 data-i18n="van7_pax_no_luggage">De 5 a 6 passageiros: sem bagagem</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-snowflake"></i>
+                            <div>
+                                <h3 data-i18n="comf_ac">Ar condicionado</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-baby"></i>
+                            <div>
+                                <h3 data-i18n="comf_child_seats">Cadeiras para crianças</h3>
+                                <p data-i18n="comf_child_seats_desc">(mediante solicitação)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bottle-water"></i>
+                            <div>
+                                <h3 data-i18n="comf_water">Água incluída</h3>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boat Tours Partner CTA -->
+    <section class="section section-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="comp_title">Passeios de Barco e Serviços de Skipper</h2>
-                <p class="section-subtitle" data-i18n="comp_subtitle">Experiências exclusivas para atender todas as suas
-                    necessidades.</p>
+                <h2 class="section-title" data-i18n="boat_cta_title">Precisa de um Passeio de Barco?</h2>
+                <p class="section-subtitle" data-i18n="boat_cta_desc">Os passeios de barco e serviços de skipper
+                    passaram a ser da responsabilidade da TagusFlow, a nossa empresa parceira.</p>
             </div>
-
-            <div class="routes-grid">
-                <!-- Card 1 -->
-                <div class="route-card scroll-reveal">
-                    <div class="card-image">
-                        <img src="./Pack Diversão TOP MAX.webp" alt="Passeio de barco em Lisboa - Pack Diversão Top Max">
-                    </div>
-                    <div class="card-content">
-                        <h3 data-i18n="comp_1_title">Pack Diversão Top Max</h3>
-                        <p data-i18n="comp_1_desc">Embarque num passeio inesquecível ao longo da costa, com destino à
-                            Praia da Ponta dos Corvos, no Seixal, ou à Praia da Giribita, em Paço D’Arcos...</p>
-
-                        <div class="service-info">
-                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
-                            <ul>
-                                <li data-i18n="comp_1_departure">Partida: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_1_arrival">Chegada: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_1_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
-                                <li data-i18n="comp_1_max_pax">Número máximo de ocupantes: 8 pessoas</li>
-                                <li data-i18n="comp_1_duration">Duração: 03h00</li>
-                            </ul>
-                        </div>
-
-                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="route-card scroll-reveal">
-                    <div class="card-image">
-                        <img src="./Pack Diversão TOP ECONÓMICO.webp" alt="Passeio costeiro de barco em Lisboa - Pack Diversão Top Económico">
-                    </div>
-                    <div class="card-content">
-                        <h3 data-i18n="comp_2_title">Pack Diversão Top Económico</h3>
-                        <p data-i18n="comp_2_desc">Trata-se de um passeio costeiro de barco com destino à Praia da Ponta
-                            dos Corvos (Seixal)...</p>
-
-                        <div class="service-info">
-                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
-                            <ul>
-                                <li data-i18n="comp_2_departure">Partida: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_2_arrival">Chegada: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_2_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
-                                <li data-i18n="comp_2_max_pax">Número máximo de ocupantes: 8 pessoas</li>
-                                <li data-i18n="comp_2_duration">Duração: 02h00</li>
-                            </ul>
-                        </div>
-
-                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="route-card scroll-reveal">
-                    <div class="card-image">
-                        <img src="./Pack Diversão EXCLUSIVE.webp" alt="Passeio barco Exclusive Lisboa Cascais">
-                    </div>
-                    <div class="card-content">
-                        <h3 data-i18n="comp_3_title">Pack Diversão Exclusive</h3>
-                        <p data-i18n="comp_3_desc">Este pack é perfeito para navegar ao longo da bela costa entre Lisboa
-                            e Cascais...</p>
-
-                        <div class="service-info">
-                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
-                            <ul>
-                                <li data-i18n="comp_3_departure">Partida: Doca de Oeiras</li>
-                                <li data-i18n="comp_3_arrival">Chegada: Doca de Oeiras</li>
-                                <li style="color: #ef5350;" data-i18n="comp_3_note">Nota: Informamos que, neste local, é
-                                    aplicada uma taxa de embarque...</li>
-                                <li data-i18n="comp_3_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
-                                <li data-i18n="comp_3_max_pax">Número máximo de ocupantes: 6 pessoas</li>
-                                <li data-i18n="comp_3_duration">Duração: 4h</li>
-                            </ul>
-                        </div>
-
-                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="route-card scroll-reveal">
-                    <div class="card-image">
-                        <img src="./Pack Cultural.webp" alt="Passeio barco Pack Cultural Belém Lisboa">
-                    </div>
-                    <div class="card-content">
-                        <h3 data-i18n="comp_4_title">Pack Cultural</h3>
-                        <p data-i18n="comp_4_desc">Este pack para além de um belo passeio permite a observação de marcos
-                            históricos...</p>
-
-                        <div class="service-info">
-                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
-                            <ul>
-                                <li data-i18n="comp_4_departure">Partida: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_4_arrival">Chegada: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_4_min_pax">Mínimo de ocupantes: 2 pessoas</li>
-                                <li data-i18n="comp_4_max_pax">Máximo de ocupantes: 8 Pessoas</li>
-                                <li data-i18n="comp_4_duration">Duração: 1h30</li>
-                            </ul>
-                        </div>
-
-                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="route-card scroll-reveal">
-                    <div class="card-image">
-                        <img src="./Pack BUGIAR.webp" alt="Passeio de barco Farol Bugio - Pack Bugiar">
-                    </div>
-                    <div class="card-content">
-                        <h3 data-i18n="comp_5_title">Pack Bugiar</h3>
-                        <p data-i18n="comp_5_desc">Este pack inclui a observação de um dos monumentos mais importantes
-                            da história...</p>
-
-                        <div class="service-info">
-                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
-                            <ul>
-                                <li data-i18n="comp_5_departure">Partida: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_5_arrival">Chegada: Doca do Bom Sucesso</li>
-                                <li data-i18n="comp_5_min_pax">Número mínimo de ocupantes: 2 pessoas</li>
-                                <li data-i18n="comp_5_max_pax">Número máximo de ocupantes: 6 pessoas</li>
-                                <li data-i18n="comp_5_duration">Duração: 1h30m aproximadamente</li>
-                            </ul>
-                        </div>
-
-                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="route-card scroll-reveal">
-                    <div class="card-image">
-                        <img src="./Aluguer de Embarcação sem Skipper.webp" alt="Aluguer de barco com ou sem skipper em Lisboa para passeios">
-                    </div>
-                    <div class="card-content">
-                        <h3 data-i18n="comp_6_title">Aluguer de Embarcação sem Skipper</h3>
-                        <p data-i18n="comp_6_desc">Para quem tem carta de navegação, mas não um barco próprio! Agora
-                            pode desfrutar...</p>
-
-                        <div class="service-info">
-                            <h4 data-i18n="comp_info_title">Informações do serviço</h4>
-                            <ul>
-                                <li data-i18n="comp_6_rates_title">Vários packs de várias horas disponíveis.</li>
-                                <li style="line-height: 1.4; margin-top: 15px;" data-i18n="comp_6_note">Antes da
-                                    partida, será recebido
-                                    por um responsável que fornecerá...</li>
-                            </ul>
-                        </div>
-
-                        <a href="#contact" class="btn btn-outline" data-i18n="btn_know_more">Saiba Mais</a>
-                    </div>
-                </div>
+            <div style="text-align: center;">
+                <a href="https://tagusflow.pt/" target="_blank" rel="noopener" class="btn btn-primary"
+                    data-i18n="boat_cta_btn">Visitar TagusFlow.pt</a>
             </div>
         </div>
     </section>
@@ -2799,6 +2766,21 @@ img {
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="reviews_title">O que dizem nossos clientes</h2>
+                <a href="https://share.google/JeGkjiLwTyAobnmW2" target="_blank" rel="noopener" class="google-rating-badge">
+                    <svg class="grb-google-icon" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
+                        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                        <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                        <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                        <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                    </svg>
+                    <div class="grb-rating-row">
+                        <span class="grb-rating">5,0</span>
+                        <span class="grb-stars">
+                            <i class="fa-solid fa-star" style="color:#FBBC05"></i><i class="fa-solid fa-star" style="color:#FBBC05"></i><i class="fa-solid fa-star" style="color:#FBBC05"></i><i class="fa-solid fa-star" style="color:#FBBC05"></i><i class="fa-solid fa-star" style="color:#FBBC05"></i>
+                        </span>
+                    </div>
+                    <span class="grb-count" data-i18n="google_review_count">46 avaliações</span>
+                </a>
             </div>
 
             <div class="carousel-container">
@@ -3136,7 +3118,7 @@ img {
                         <li><a href="#hero" data-i18n="nav_home">Início</a></li>
                         <li><a href="#services" data-i18n="nav_services">Serviços</a></li>
                         <li><a href="#routes" data-i18n="nav_routes">Tours</a></li>
-                        <li><a href="#complementary" data-i18n="nav_skipper">Skipper</a></li>
+                        <li><a href="https://tagusflow.pt/" target="_blank" rel="noopener" data-i18n="nav_skipper">Skipper</a></li>
                         <li><a href="#contact" data-i18n="nav_book">Reservar</a></li>
                     </ul>
                 </div>
